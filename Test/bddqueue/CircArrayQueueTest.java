@@ -114,7 +114,7 @@ public class CircArrayQueueTest {
 	     
 	     @Test
 	     public void isValidTest(){
-	    	 assertFalse(q3.isValid());
+	    	 assertTrue(q2.isValid());
 	     }
 		  	
 	 }
