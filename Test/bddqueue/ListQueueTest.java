@@ -23,21 +23,6 @@ public class ListQueueTest {
 	         q2.enqueue(2);  	
 	         q2.enqueue(3); 	
 	     }
-	 	
-	     @Test(expected = IllegalArgumentException.class) 	
-	     public void ArraySizeTest(){
-	     CircArrayQueue<Object> q = new CircArrayQueue<>(-1);	
-	     }
-		
-	     @Test(expected = IllegalArgumentException.class) 	
-	     public void ArraySizeTest2(){	
-	         CircArrayQueue<Object> q = new CircArrayQueue<>(0);
-	     }
-	 	
-	     @Test	
-	     public void CapacityTest(){ 	
-	         assertNotEquals(q.capacity(), 0); 	
-	     }
 	  	
 	     @Test 	
 	     public void ClearTest(){	
@@ -80,38 +65,10 @@ public class ListQueueTest {
 	     public void Enqueue2TestThrow(){	  	
 	         q2.enqueue(null);  	
 	     }  	
-	       	
-	     @Test  	
-	     public void isEmptyTest(){  	
-	         assertFalse(q.isEmpty());	
-	         q.clear();  	
-	         assertTrue(q.isEmpty()); 	
-	     }
-	  	
-	     @Test	
-	     public void isFullTest(){	
-	         assertFalse(q2.isFull());  	
-	         q2.enqueue(4); 	
-	         q2.enqueue(5);  	
-	         q2.enqueue(6);  	
-	         q2.enqueue(7);	  	
-	         q2.enqueue(8);	  	
-	         q2.enqueue(9);	  	
-	         q2.enqueue(10);	  	
-	         assertTrue(q2.isFull());	  	
-	     }
 		  	
 	     @Test	  	
 	     public void LengthTest(){	  	
 	         assertEquals(q.length(), 4);  	
-	     }
-		  	
-	     @Test	  	
-	     public void toStringTest(){	  	
-	         System.out.println(q.toString());	  	
-	         assertEquals(q.toString(), "(Hello, Shaked, Kate, Audrey)20");	  	
-	         System.out.println(q2.toString());	  	
-	         assertEquals(q2.toString(), "(1, 2, 3)10");	  	
 	     }
 	     
 	     @Test
