@@ -51,7 +51,7 @@ public class AbstractQueueTest {
          System.out.println(q.toString());	  	
          assertEquals(q.toString(), "(Hello, Shaked, Kate, Audrey)20");	  	
          System.out.println(q2.toString());	  	
-         assertEquals(q2.toString(), "(1, 2, 3)10");	  	
+         assertEquals(q2.toString(), "[123, ]:10");	  	
      }
 	
 	
