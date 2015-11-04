@@ -23,7 +23,9 @@ public class AbstractQueueTest {
 
 	@Test
 	public void Capacitytest() {
-		assertEquals(q.capacity(), 20);
+		assertEquals(q.capacity, 20);
 	}
+	
+	
 
 }
