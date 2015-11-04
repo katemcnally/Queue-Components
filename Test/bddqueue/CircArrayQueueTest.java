@@ -104,19 +104,6 @@ public class CircArrayQueueTest {
 	     }
 		  	
 	     @Test	  	
-	     public void PeekTest(){	  	
-	         int x = (int) q2.peek();	  	
-	         assertEquals(x, 3);	  	
-	     }
-		  	
-	     @Test(expected = IllegalStateException.class)	
-	     public void PeekTestThrow(){	  	
-	         q.clear();  	
-	         System.out.println(q.toString());	  	
-	         q.peek();	  	
-	     }	  	
-		  	
-	     @Test	  	
 	     public void toStringTest(){	  	
 	         System.out.println(q.toString());	  	
 	         assertEquals(q.toString(), "(Hello, Shaked, Kate, Audrey)20");	  	
