@@ -98,9 +98,9 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
 
 	@Override
 	public boolean isValid() {
-		for(int i = 0; i<length; i++){
-			if(contents[i] == null) return false;
-		}
+//		for(int i = 0; i<length; i++){
+//			if(contents[i] == null) return false;
+//		}
 		if(length() < 0 || length() > capacity) return false;
 		if(capacity != contents.length) return false;
 		if(capacity <= 0) return false;
