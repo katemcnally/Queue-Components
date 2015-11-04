@@ -121,5 +121,10 @@ public class CircArrayQueueTest {
 	     public void newInstanceTest(){
 	    	 assertEquals(q2.capacity(), q2.newInstance().capacity());
 	     }
+	     
+	     @Test
+	     public void IteratorTest(){
+	    	 assertTrue(q2.iterator().hasNext());
+	     }
 		  	
 	 }
