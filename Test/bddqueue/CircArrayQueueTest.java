@@ -9,6 +9,7 @@ public class CircArrayQueueTest {
 
 	CircArrayQueue<Object> q = new CircArrayQueue<>(20); 	
 	CircArrayQueue<Object> q2 = new CircArrayQueue<>(10);
+	CircArrayQueue<Object> q3 = new CircArrayQueue<>(10);
 		  	
 	     @Before 	
 	     public void setUp() throws Exception {
@@ -113,8 +114,7 @@ public class CircArrayQueueTest {
 	     
 	     @Test
 	     public void isValidTest(){
-	    	 q2.enqueue(null);
-	    	 assertFalse(q2.isValid());
+	    	 assertFalse(q3.isValid());
 	     }
 		  	
 	 }
