@@ -49,8 +49,7 @@ public class ListQueue<E> extends AbstractQueue<E> {
         }  	
         else{  	
             if(length()<capacity){  	
-            	list.set(length(), element);  	
-                length++;
+            	list.set(length(), element);
             } 	
             else{ 	
                 throw new IllegalStateException();	
