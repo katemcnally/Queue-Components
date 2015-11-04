@@ -5,9 +5,6 @@ import java.util.*;
 public class ListQueue<E> extends AbstractQueue<E> {
 	
 	private List<E> list;
-    private int first;
-    private int length;
-    private int capacity;
 	
 	public ListQueue(int max) {
 		super(max);
@@ -66,10 +63,10 @@ public class ListQueue<E> extends AbstractQueue<E> {
         }  	
 	}
 
-//	@SuppressWarnings("unchecked")
-//	@Override
-//	public void append(Queue<E> that) throws NullPointerException, IllegalStateException {
-//		that = (Queue<E>) dequeue();
-//		enqueue((E) that);
-//	}
+	@SuppressWarnings("unchecked")
+	@Override
+	public void append(Queue<E> that) throws NullPointerException, IllegalStateException {
+		that = (Queue<E>) dequeue();
+		enqueue((E) that);
+	}
 }
