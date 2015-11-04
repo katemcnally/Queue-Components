@@ -81,12 +81,12 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
         return length;	  	
     }
 	  	
-    public E peek() throws IllegalStateException {	
-        if(isEmpty()==true){ 	
-            throw new IllegalStateException();
-    }	
-        return contents[(first+ length -1) % capacity]; 	
-    }
+//    public E peek() throws IllegalStateException {	
+//        if(isEmpty()==true){ 	
+//            throw new IllegalStateException();
+//    }	
+//        return contents[(first+ length -1) % capacity]; 	
+//    }
   	
     public String toString(){  	
         String x = "(";	  	
