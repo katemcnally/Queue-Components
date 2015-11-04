@@ -60,7 +60,7 @@ public class ListQueue<E> extends AbstractQueue<E> {
 
 	@Override
 	public E dequeue() throws IllegalStateException {
-		if(length!=0){ 	
+		if(length()!=0){ 	
             E x = list.get(0);	
             first++;	  	
             length--;  	
