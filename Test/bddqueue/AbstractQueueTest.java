@@ -71,6 +71,11 @@ public class AbstractQueueTest {
 	 public void CopyTest(){
 		 q2.copy();
 	 }
+	 
+	 @Test
+	 public void HashCodeTest(){
+		 q2.hashCode();
+	 }
 	
 	
 
