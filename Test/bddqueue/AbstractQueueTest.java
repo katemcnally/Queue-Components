@@ -64,7 +64,7 @@ public class AbstractQueueTest {
 	 @Test(expected = IllegalStateException.class)
 	 public void AppendTestException(){
 		 //sum greater than capacity
-		 q.append(q3);
+		 q3.append(q);
 	 }
 	
 	
