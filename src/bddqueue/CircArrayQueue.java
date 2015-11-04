@@ -1,6 +1,7 @@
 package bddqueue;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class CircArrayQueue<E> extends AbstractQueue<E> {
 	  	
@@ -11,7 +12,8 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
     private int capacity;
 	
     @SuppressWarnings("unchecked")	  	
-    public CircArrayQueue(int max) {	  	
+    public CircArrayQueue(int max) {	
+    	super(max);
         if(max <= 0){  	
             throw new IllegalArgumentException();  	
         }
@@ -100,30 +102,37 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
 
 	@Override
 	public boolean isValid() {
-		// TODO Auto-generated method stub
-		return false;
+		for(int i = 0; i < length(); i++) {
+			if(contents[i] == null) return false;
+		}
+		if(length() < 0 || length() > capacity) return false;
+		if(capacity != contents.length) return false;
+		if(capacity <= 0) return false;
+		return true;
 	}
 
 	@Override
 	public Queue<E> newInstance() {
-		//new queue with the same capacity as this queue
-		Queue n = new CircArrayQueue(capacity);
-		return n;
+		return new CircArrayQueue<>(capacity);
 	}
 
 	@Override
 	public Iterator<E> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return new QueueIterator();
 	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public void append(Queue<E> that) throws NullPointerException, IllegalStateException {
-		that = (Queue<E>) dequeue();
-		Queue<E> n = newInstance();
-		enqueue((E) that);
-		
+	
+	public class QueueIterator implements Iterator<E>{
+		private int index;
+		public QueueIterator(){
+			index = 0;
+		}
+		public boolean hasNext(){
+			return index<length;
+		}
+		public E next(){
+			if(!hasNext()) throw new  NoSuchElementException();
+			return contents[index++];
+		}
 	}
  	
 }
