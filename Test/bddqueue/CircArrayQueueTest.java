@@ -116,5 +116,10 @@ public class CircArrayQueueTest {
 	     public void isValidTest(){
 	    	 assertTrue(q2.isValid());
 	     }
+	     
+	     @Test
+	     public void newInstanceTest(){
+	    	 assertEquals(q2.capacity(), q2.newInstance().capacity());
+	     }
 		  	
 	 }
