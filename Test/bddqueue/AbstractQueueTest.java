@@ -45,6 +45,14 @@ public class AbstractQueueTest {
          q2.enqueue(10);	  	
          assertTrue(q2.isFull());	  	
      }
+	 
+	 @Test	  	
+     public void toStringTest(){	  	
+         System.out.println(q.toString());	  	
+         assertEquals(q.toString(), "(Hello, Shaked, Kate, Audrey)20");	  	
+         System.out.println(q2.toString());	  	
+         assertEquals(q2.toString(), "(1, 2, 3)10");	  	
+     }
 	
 	
 
