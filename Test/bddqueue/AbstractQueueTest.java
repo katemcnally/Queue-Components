@@ -54,10 +54,10 @@ public class AbstractQueueTest {
          assertEquals(q2.toString(), "[123, ]:10");	  	
      }
 	 
-	 @Test
+	 @Test(expected = NullPointerException.class)
 	 public void AppendTest(){
-		 q.append((Queue<Object>) q2.iterator().next());
-		 assertEquals(q.length(), 5);
+		 q.append(q2);
+		 assertEquals(q.length(), 7);
 	 }
 	
 	
