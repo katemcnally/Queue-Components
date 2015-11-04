@@ -76,7 +76,6 @@ public class AbstractQueueTest {
 	 
 	 @Test
 	 public void HashCodeTest(){
-		 System.out.println(q2.hashCode());
 		 q2.hashCode();
 		 assertEquals(q2.hashCode(), 37954760);
 	 }
