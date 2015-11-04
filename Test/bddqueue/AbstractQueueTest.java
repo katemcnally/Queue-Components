@@ -66,6 +66,11 @@ public class AbstractQueueTest {
 		 //sum greater than capacity
 		 q3.append(q);
 	 }
+	 
+	 @Test
+	 public void CopyTest(){
+		 q2.copy();
+	 }
 	
 	
 
