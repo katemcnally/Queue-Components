@@ -80,6 +80,11 @@ public class AbstractQueueTest {
 		 assertEquals(q2.hashCode(), 37954760);
 	 }
 	
+	 @Test
+	 public void equalsTest(){
+		 assertTrue(q.equals(q));
+		 assertFalse(q.equals(null));
+	 }
 	
 
 }
