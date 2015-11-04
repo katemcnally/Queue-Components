@@ -61,7 +61,8 @@ public class AbstractQueueTest {
 		 assertEquals(q.length(), 7);
 	 }
 	 
-	 @Test(expected = IllegalStateException.class){
+	 @Test(expected = IllegalStateException.class)
+	 public void AppendTestException(){
 		 q.append(q3);
 	 }
 	
