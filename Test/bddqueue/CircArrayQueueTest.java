@@ -2,6 +2,8 @@ package bddqueue;
 
 import static org.junit.Assert.*;
 
+import java.util.NoSuchElementException;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -126,7 +128,10 @@ public class CircArrayQueueTest {
 	     public void IteratorTest(){
 	    	 assertTrue(q2.iterator().hasNext());
 	    	 assertEquals(q3.iterator().next(), null);
-	    	 q3.enqueue(4);
+	     }
+	     
+	     @Test(expected = NoSuchElementException.class)
+	     public void IteratorTextException(){
 	    	 assertEquals(q3.iterator().next(), 4);
 	     }
 		  	
