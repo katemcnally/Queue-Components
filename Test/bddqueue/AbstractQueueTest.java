@@ -76,6 +76,7 @@ public class AbstractQueueTest {
 	 
 	 @Test
 	 public void HashCodeTest(){
+		 System.out.println(q2.hashCode());
 		 q2.hashCode();
 	 }
 	
