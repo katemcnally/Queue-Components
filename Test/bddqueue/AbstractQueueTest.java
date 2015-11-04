@@ -9,7 +9,7 @@ public class AbstractQueueTest {
 	
 	AbstractQueue<Object> q = new CircArrayQueue<>(20);
 	AbstractQueue<Object> q2 = new ListQueue<>(10);
-	AbstractQueue<Object> q3 = new ListQueue<>(10);
+	AbstractQueue<Object> q3 = new ListQueue<>(1);
 
 	@Before
 	public void setUp() throws Exception {
@@ -63,7 +63,8 @@ public class AbstractQueueTest {
 	 
 	 @Test(expected = IllegalStateException.class)
 	 public void AppendTestException(){
-		 q.append(q3);
+		 //sum greater than capacity
+		 q3.append(q);
 	 }
 	
 	
