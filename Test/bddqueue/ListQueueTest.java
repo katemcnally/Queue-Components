@@ -107,13 +107,6 @@ public class ListQueueTest {
 	 	         assertEquals(q.length(), 4);  	
 	 	     }
 	 		  	
-	 	     @Test	  	
-	 	     public void toStringTest(){	  	
-	 	         System.out.println(q.toString());	  	
-	 	         assertEquals(q.toString(), "(Hello, Shaked, Kate, Audrey)20");	  	
-	 	         System.out.println(q2.toString());	  	
-	 	         assertEquals(q2.toString(), "(1, 2, 3)10");	  	
-	 	     }
 	 	     
 	 	     @Test
 	 	     public void isValidTest(){
