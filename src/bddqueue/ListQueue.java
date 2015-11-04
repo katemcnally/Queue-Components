@@ -47,9 +47,8 @@ public class ListQueue<E> extends AbstractQueue<E> {
 		if(element == null){	  	
             throw new NullPointerException();	  	
         }  	
-        else{  	
-        	length = list.size();
-            if(length<capacity){  	
+        else{
+            if(length()<capacity){  	
             	list.add(element);
             } 	
             else{ 	
