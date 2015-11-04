@@ -21,10 +21,9 @@ public class ListQueueTest {
 	         q.enqueue("Audrey");	
 	         q2.enqueue(1);	
 	         q2.enqueue(2);  	
-	         q2.enqueue(3); 	
+	         q2.enqueue(3); 
+	         System.out.println("length: "+q.length());
 	     }
-	     
-	     System.out.println("length: "+q.size());
 	  	
 	     @Test 	
 	     public void ClearTest(){	
@@ -69,7 +68,7 @@ public class ListQueueTest {
 	     }  	
 		  	
 	     @Test	  	
-	     public void LengthTest(){	  	
+	     public void LengthTest(){
 	         assertEquals(q.length(), 4);  	
 	     }
 	     
