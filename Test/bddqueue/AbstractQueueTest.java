@@ -26,6 +26,26 @@ public class AbstractQueueTest {
 		assertEquals(q.capacity, 20);
 	}
 	
+	 @Test  	
+     public void isEmptyTest(){  	
+         assertFalse(q.isEmpty());	
+         q.clear();  	
+         assertTrue(q.isEmpty()); 	
+     }
+	 
+	 @Test	
+     public void isFullTest(){	
+         assertFalse(q2.isFull());  	
+         q2.enqueue(4); 	
+         q2.enqueue(5);  	
+         q2.enqueue(6);  	
+         q2.enqueue(7);	  	
+         q2.enqueue(8);	  	
+         q2.enqueue(9);	  	
+         q2.enqueue(10);	  	
+         assertTrue(q2.isFull());	  	
+     }
+	
 	
 
 }
