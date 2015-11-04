@@ -23,6 +23,8 @@ public class ListQueueTest {
 	         q2.enqueue(2);  	
 	         q2.enqueue(3); 	
 	     }
+	     
+	     System.out.println("length: "+q.size());
 	  	
 	     @Test 	
 	     public void ClearTest(){	
