@@ -9,6 +9,7 @@ public class AbstractQueueTest {
 	
 	AbstractQueue<Object> q = new CircArrayQueue<>(20);
 	AbstractQueue<Object> q2 = new ListQueue<>(10);
+	AbstractQueue<Object> q3 = new ListQueue<>(10);
 
 	@Before
 	public void setUp() throws Exception {
@@ -58,6 +59,10 @@ public class AbstractQueueTest {
 	 public void AppendTest(){
 		 q.append(q2);
 		 assertEquals(q.length(), 7);
+	 }
+	 
+	 @Test(expected = IllegalStateException.class){
+		 q.append(q3);
 	 }
 	
 	
