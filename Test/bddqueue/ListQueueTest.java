@@ -25,8 +25,4 @@ public class ListQueueTest {
 	         
 	     }
 	     
-	     @Test
-	     public void DequeueTest(){
-	    	 assertEquals(q2.dequeue(), 1);
-	     }
 }
