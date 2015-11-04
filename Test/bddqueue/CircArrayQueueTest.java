@@ -110,5 +110,11 @@ public class CircArrayQueueTest {
 	         System.out.println(q2.toString());	  	
 	         assertEquals(q2.toString(), "(1, 2, 3)10");	  	
 	     }
+	     
+	     @Test
+	     public void isValidTest(){
+	    	 q2.enqueue(null);
+	    	 assertFalse(q2.isValid());
+	     }
 		  	
 	 }
