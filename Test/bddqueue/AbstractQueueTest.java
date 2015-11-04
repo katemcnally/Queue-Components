@@ -69,7 +69,7 @@ public class AbstractQueueTest {
 	 
 	 @Test
 	 public void CopyTest(){
-		 AbstractQueue<Object> q = new ListQueue<>(1);
+		 Queue<Object> q = new ListQueue<>(1);
 		 q2.copy();
 		 assertEquals(q, q2);
 		 
