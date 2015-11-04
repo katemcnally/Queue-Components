@@ -28,13 +28,10 @@ public class ListQueue<E> extends AbstractQueue<E> {
 
 	public boolean isValid() {
 		for(E elem : list) {
-			if(elem == null) 
-				return false;
+			if(elem == null) return false;
 		}
-		if(list.size() > capacity) 
-			return false;
-		if(capacity <= 0) 
-			return false;
+		if(list.size() > capacity) return false;
+		if(capacity <= 0) return false;
 		return true;
 	}
 	
@@ -69,10 +66,10 @@ public class ListQueue<E> extends AbstractQueue<E> {
         }  	
 	}
 
-	@SuppressWarnings("unchecked")
-	@Override
-	public void append(Queue<E> that) throws NullPointerException, IllegalStateException {
-		that = (Queue<E>) dequeue();
-		enqueue((E) that);
-	}
+//	@SuppressWarnings("unchecked")
+//	@Override
+//	public void append(Queue<E> that) throws NullPointerException, IllegalStateException {
+//		that = (Queue<E>) dequeue();
+//		enqueue((E) that);
+//	}
 }
