@@ -25,5 +25,8 @@ public class ListQueueTest {
 	         
 	     }
 	     
-	     
+	     @Test
+	     public void print(){
+	    	 System.out.println(q2.dequeue());
+	     }
 }
