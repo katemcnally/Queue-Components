@@ -23,14 +23,14 @@ public abstract class AbstractQueue<E> implements Queue<E> {
 		return length() == capacity;
 	}
 	
-//	public void append(Queue<E> that) throws NullPointerException, IllegalStateException{ //append
-//		Stack<E> temp = copy();
-//		this.clear();
-//		while(!temp.isEmpty()) {
-//			E elem = temp.pop();
-//			this.enqueue(elem);
-//		}
-//	}
+	public void append(Queue<E> that) throws NullPointerException, IllegalStateException{ //append
+		Queue<E> temp = copy();
+		this.clear();
+		while(!temp.isEmpty()) {
+			E elem = temp.dequeue();
+			this.enqueue(elem);
+		}
+	}
 	
 	public Queue<E> copy() {
 		Queue<E> result = newInstance();
@@ -52,6 +52,7 @@ public abstract class AbstractQueue<E> implements Queue<E> {
 		return result;
 	}
 
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) return true;
@@ -59,7 +60,7 @@ public abstract class AbstractQueue<E> implements Queue<E> {
 		if (!(obj instanceof Stack)) return false;
 		Stack<?> other = (Stack<?>) obj;
 		if (capacity != other.capacity()) return false;
-		if (length() != ((Queue<E>) other).length()) return false;
+		if (length() != ((Queue) other).length()) return false;
 		Iterator<?> otherIter = other.iterator();
 		for(E elem : this) {
 			if(!elem.equals(otherIter.next())) return false;

@@ -2,7 +2,7 @@ package bddqueue;
 
 import java.util.Iterator;
 
-public class CircArrayQueue<E> implements Queue<E> {
+public class CircArrayQueue<E> extends AbstractQueue<E> {
 	  	
 	  	
     private E[] contents;  	
@@ -99,12 +99,6 @@ public class CircArrayQueue<E> implements Queue<E> {
     }
 
 	@Override
-	public Iterator<E> iterator() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public boolean isValid() {
 		// TODO Auto-generated method stub
 		return false;
@@ -112,19 +106,24 @@ public class CircArrayQueue<E> implements Queue<E> {
 
 	@Override
 	public Queue<E> newInstance() {
-		// TODO Auto-generated method stub
-		return null;
+		//new queue with the same capacity as this queue
+		Queue n = new CircArrayQueue(capacity);
+		return n;
 	}
 
 	@Override
-	public Queue<E> copy() {
+	public Iterator<E> iterator() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void append(Queue<E> that) throws NullPointerException, IllegalStateException {
-		// TODO Auto-generated method stub
+		that = (Queue<E>) dequeue();
+		Queue n = newInstance();
+		enqueue((E) that);
 		
-	}	  	
+	}
+ 	
 }
