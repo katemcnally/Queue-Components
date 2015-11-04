@@ -14,10 +14,6 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
     @SuppressWarnings("unchecked")	  	
     public CircArrayQueue(int max) {	
     	super(max);
-        if(max <= 0){  	
-            throw new IllegalArgumentException();
-        }
-  	
         contents = (E[]) new Object[max];  	
         first = 0; 	
         length = 0;  	
