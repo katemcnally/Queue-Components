@@ -15,6 +15,7 @@ public class ListQueueTest {
 		  	
 	     @Before 	
 	     public void setUp() throws Exception {
+	    	 System.out.println("length: "+q.length());
 	         q.enqueue("Hello");
 	         q.enqueue("Shaked");	
 	         q.enqueue("Kate");	
@@ -22,7 +23,7 @@ public class ListQueueTest {
 	         q2.enqueue(1);	
 	         q2.enqueue(2);  	
 	         q2.enqueue(3); 
-	         System.out.println("length: "+q.length());
+	         
 	     }
 	  	
 	     @Test 	
