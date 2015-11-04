@@ -62,11 +62,4 @@ public class ListQueue<E> extends AbstractQueue<E> {
             throw new IllegalStateException();
         }  	
 	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public void append(Queue<E> that) throws NullPointerException, IllegalStateException {
-		that = (Queue<E>) dequeue();
-		enqueue((E) that);
-	}
 }
