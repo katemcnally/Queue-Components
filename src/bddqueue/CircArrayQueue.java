@@ -121,7 +121,7 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
 	@Override
 	public void append(Queue<E> that) throws NullPointerException, IllegalStateException {
 		that = (Queue<E>) dequeue();
-		Queue n = newInstance();
+		Queue<E> n = newInstance();
 		enqueue((E) that);
 		
 	}
