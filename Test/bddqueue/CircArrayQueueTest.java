@@ -127,6 +127,8 @@ public class CircArrayQueueTest {
 	     @Test
 	     public void IteratorTest(){
 	    	 assertTrue(q2.iterator().hasNext());
+	    	 q3.enqueue(3);
+	    	 assertEquals(q3.iterator().next(), 3);
 	     }
 	     
 	     @Test(expected = NoSuchElementException.class)
