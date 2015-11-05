@@ -12,8 +12,9 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
     private int capacity;
 	
     @SuppressWarnings("unchecked")	  	
-    public CircArrayQueue(int max) {	
+    public CircArrayQueue(int max) {
     	super(max);
+    	if(max<=0) throw new IllegalArgumentException();
         contents = (E[]) new Object[max];  	
         first = 0; 	
         length = 0;  	
@@ -76,13 +77,6 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
     public int length() {	
         return length;	  	
     }
-	  	
-//    public E peek() throws IllegalStateException {	
-//        if(isEmpty()==true){ 	
-//            throw new IllegalStateException();
-//    }	
-//        return contents[(first+ length -1) % capacity]; 	
-//    }
   	
     public String toString(){  	
         String x = "(";	  	
@@ -98,12 +92,12 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
 
 	@Override
 	public boolean isValid() {
-		for(int i = 0; i<length; i++){
-			if(contents[i] == null) return false;
-		}
-		if(length() < 0 || length() > capacity) return false;
-		if(capacity != contents.length) return false;
-		if(capacity <= 0) return false;
+//		for(int i = 0; i<length; i++){
+//			if(contents[i] == null) return false;	...this is tested in enqueue
+//		}
+		//if(length() < 0 || length() > capacity) return false;		...this is tested in dequeue and enqueue
+		//if(capacity != contents.length) return false;
+		//if(capacity <= 0) return false;					...this is tested in the constructor
 		return true;
 	}
 

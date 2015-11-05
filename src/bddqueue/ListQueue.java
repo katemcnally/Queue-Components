@@ -1,6 +1,13 @@
 package bddqueue;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.util.*;
+
+import org.junit.Before;
+import org.junit.Test;
 
 public class ListQueue<E> extends AbstractQueue<E> {
 	
@@ -24,10 +31,10 @@ public class ListQueue<E> extends AbstractQueue<E> {
 	}
 
 	public boolean isValid() {
-		for(E elem : list) {
-			if(elem == null) return false;
-		}
-		if(list.size() > capacity) return false;
+//		for(E elem : list) {					...this is tested in enqueue
+//			if(elem == null) return false;
+//		}
+//		if(list.size() > capacity) return false;	...this is tested in enqueue
 		if(capacity <= 0) return false;
 		return true;
 	}

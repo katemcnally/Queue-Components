@@ -7,7 +7,6 @@ public abstract class AbstractQueue<E> implements Queue<E> {
 	protected final int capacity;
 	
 	protected AbstractQueue(int max) throws IllegalArgumentException {
-		if(max <= 0) throw new IllegalArgumentException();
 		capacity = max;
 	}
 	
@@ -16,7 +15,12 @@ public abstract class AbstractQueue<E> implements Queue<E> {
 	}
 	
 	public boolean isEmpty() {
-		return length() == 0;
+		if(this.length() == 0){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	public boolean isFull() {
@@ -31,7 +35,7 @@ public abstract class AbstractQueue<E> implements Queue<E> {
 			length_that--;
 		}
 		int sum = this.length() + that.length();
-		if(sum >= this.capacity){
+		if(this.capacity <= sum){
 			throw new IllegalStateException();
 		}
 		if(that.length() == 0){

@@ -120,7 +120,7 @@ public class CircArrayQueueTest {
 	     }
 	     
 	     @Test
-	     public void newInstanceTest(){
+	     public void newInstanceTest(){ 
 	    	 assertEquals(q2.capacity(), q2.newInstance().capacity());
 	     }
 	     

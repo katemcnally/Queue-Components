@@ -110,7 +110,10 @@ public class ListQueueTest {
 	 	     
 	 	     @Test
 	 	     public void isValidTest(){
-	 	    	 assertTrue(q2.isValid());
+	 	    	assertTrue(q2.isValid());
+	 	    	ListQueue<Object> q4 = new ListQueue<>(0);
+	 	    	assertFalse(q4.isValid());
+	 	    	ListQueue<Object> q5 = new ListQueue<>(1);
 	 	     }
 	 	     
 	 	     @Test
