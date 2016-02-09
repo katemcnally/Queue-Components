@@ -96,7 +96,7 @@ public class CircArrayQueue<E> extends AbstractQueue<E> {
 //			if(contents[i] == null) return false;	...this is tested in enqueue
 //		}
 		//if(length() < 0 || length() > capacity) return false;		...this is tested in dequeue and enqueue
-		//if(capacity != contents.length) return false;
+		//if(capacity != contents.length) return false;			... this is tested in another method
 		//if(capacity <= 0) return false;					...this is tested in the constructor
 		return true;
 	}

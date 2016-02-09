@@ -33,7 +33,7 @@ public class ListQueueTest {
 	 	     @Test(expected = IllegalArgumentException.class) 	
 	 	     public void ArraySizeTest2(){	
 	 	         CircArrayQueue<Object> q = new CircArrayQueue<>(0);
-	 	     }
+	 	     } 
 	 	 	
 	 	     @Test	
 	 	     public void CapacityTest(){ 	

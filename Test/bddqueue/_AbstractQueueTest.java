@@ -59,14 +59,19 @@ public class _AbstractQueueTest {
      }
 	 
 	 @Test(expected = NullPointerException.class)
-	 public void AppendTest(){
+	 public void AppendTestNullPointerException(){
 		 q.append(q2);
 		 assertEquals(q.length(), 7);
 		 q3.append(q4);
 	 }
 	 
+	 @Test
+	 public void AppendTest(){
+		 q.append(q3);
+	 }
+	 
 	 @Test(expected = IllegalStateException.class)
-	 public void AppendTestException(){
+	 public void AppendTestIllegalStateException(){
 		 //sum greater than capacity
 		 q3.append(q);
 	 }

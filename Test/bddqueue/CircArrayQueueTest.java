@@ -12,6 +12,7 @@ public class CircArrayQueueTest {
 	CircArrayQueue<Object> q = new CircArrayQueue<>(20); 	
 	CircArrayQueue<Object> q2 = new CircArrayQueue<>(10);
 	CircArrayQueue<Object> q3 = new CircArrayQueue<>(10);
+	CircArrayQueue<Object> q4 = new CircArrayQueue<>(1);
 		  	
 	     @Before 	
 	     public void setUp() throws Exception {
